@@ -2,12 +2,13 @@
 
 /* inner-width */
 $width-inner: (
-  width-inner-sm: math.div(20, (375 * 100vw)),
-  width-inner-lg: math.div(200, (1440 * 100vw)),
+  width-inner-sm: calc(20 / 375 * 100vw),
+  width-inner-sm2: calc(36 / 375 * 100vw),
+  width-inner-lg: calc(200 / 1440 * 100vw),
 );
 
 /* space */
-$space: (
+$spaces: (
   space-sm: 16px,
   space-md: 24px,
   space-lg: 32px,
@@ -16,3 +17,12 @@ $space: (
   space-3xl: 64px,
   space-4xl: 120px,
 );
+
+:root {
+  @each $key, $width in $width-inner {
+    --size-#{$key}: #{$width};
+  }
+  @each $key, $space in $spaces {
+    --size-#{$key}: #{$space};
+  }
+}
