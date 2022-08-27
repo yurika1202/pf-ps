@@ -1,0 +1,18 @@
+@use '../functions/' as *;
+@use '../mixin/' as mix;
+
+.ly_footer {
+  --footer-pt: var(--size-space-xl);
+  --footer-pb: var(--size-space-sm);
+
+  padding: var(--footer-pt) 0 var(--footer-pb);
+  background: color(--c-base);
+}
+
+.ly_footer_inner {
+  margin: 0 var(--size-width-inner-sm);
+
+  &__sec {
+    margin: 0 var(--size-width-inner-sm2);
+  }
+}
