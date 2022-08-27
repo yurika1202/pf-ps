@@ -1,0 +1,31 @@
+@use 'sass:color';
+@use '../functions/color' as *;
+
+// palettes
+// --------------------------------------------------------------------------
+$black: #333;
+$white: #fff;
+$gray: #e5e5e5;
+$green: #31452d;
+$yellow: #b69b04;
+$pastel-yellow: #eeead0;
+
+// color map
+// --------------------------------------------------------------------------
+$theme-colors: (
+  bg-body: $white,
+  bg-contents: $pastel-yellow,
+  text: $black,
+  base: $green,
+  accent: $yellow,
+  white: $white,
+  gray: $gray,
+);
+
+// color root
+// --------------------------------------------------------------------------
+:root {
+  @each $key, $color in $theme-colors {
+    --c-#{$key}: #{hex-to-rgb($color)};
+  }
+}

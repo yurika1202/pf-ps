@@ -1,0 +1,8 @@
+$fallback: 'Helvetica Neue', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', meiryo, sans-serif;
+$noto: 'Noto Serif JP', serif;
+$lora: 'Lora', serif;
+$font: (
+  font-fallback: $fallback,
+  font-base-jp: $noto,
+  font-base-en: $lora,
+);

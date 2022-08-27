@@ -1,0 +1,18 @@
+@use 'sass:math';
+
+/* inner-width */
+$width-inner: (
+  width-inner-sm: math.div(20, (375 * 100vw)),
+  width-inner-lg: math.div(200, (1440 * 100vw)),
+);
+
+/* space */
+$space: (
+  space-sm: 16px,
+  space-md: 24px,
+  space-lg: 32px,
+  space-xl: 40px,
+  space-2xl: 80px,
+  space-3xl: 64px,
+  space-4xl: 120px,
+);

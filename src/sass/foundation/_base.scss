@@ -1,3 +1,7 @@
+@use '../functions/' as *;
+@use '../mixin/' as mix;
+@use '../variables/' as var;
+
 body {
   display: flex;
   position: relative;
@@ -7,10 +11,10 @@ body {
   overflow-x: hidden;
   background: color(--c-bg-body);
   color: color(--c-text);
-  font-family: font-family(font-global);
+  font-family: font-family(font-base-jp), font-family(font-fallback);
   font-size: rem(16px);
   font-feature-settings: 'palt' 1;
-  line-height: 1.75;
+  line-height: 0.875;
   text-size-adjust: 100%;
 }
 
