@@ -2,17 +2,38 @@
 @use '../mixin/' as mix;
 
 .ly_footer {
-  --footer-pt: var(--size-space-xl);
-  --footer-pb: var(--size-space-sm);
-
-  padding: var(--footer-pt) 0 var(--footer-pb);
   background: color(--c-base);
 }
 
 .ly_footer_inner {
   margin: 0 var(--size-width-inner-sm);
+  padding: var(--size-space-xl) 0 var(--size-space-sm);
+  text-align: center;
 
   &__sec {
-    margin: 0 var(--size-width-inner-sm2);
+    width: 100%;
+    padding: var(--size-space-lg) var(--size-width-inner-sm2) var(--size-space-sm);
+    border-top: 1px solid color(--c-white);
+    background: color(--c-bg-footer-sub);
   }
+}
+
+.ly_footer_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-space-sm);
+}
+
+.ly_footer_globalNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ly_footer_secondNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-space-xl);
 }
