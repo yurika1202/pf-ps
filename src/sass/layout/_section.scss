@@ -4,10 +4,14 @@
 
 .ly_section_contents {
   margin-top: var(--size-space-md);
-}
 
-.ly_section_concept {
-  width: 100vw;
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
+  &__w100 {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+
+    &_inner {
+      padding: 0 calc(50vw - 50%);
+    }
+  }
 }
