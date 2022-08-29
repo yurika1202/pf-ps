@@ -1,0 +1,40 @@
+@use '../functions/' as *;
+@use '../variables/' as var;
+
+.el_btn {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.el_iconBtn {
+  position: relative;
+  padding-right: var(--size-space-md);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: rem(16px);
+    height: rem(16px);
+    transform: translateY(-50%);
+  }
+
+  &__rtArrow {
+    &_wh {
+      color: color(--c-white);
+
+      &::after {
+        background: url(#{var.$img-path}icon/arrow-w.svg) no-repeat center center / contain;
+      }
+    }
+
+    &_bk {
+      color: color(--c-text);
+
+      &::after {
+        background: url(#{var.$img-path}icon/arrow-b.svg) no-repeat center center / contain;
+      }
+    }
+  }
+}
