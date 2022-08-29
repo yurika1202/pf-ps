@@ -1,0 +1,56 @@
+@use '../functions/' as *;
+
+.bl_contact {
+  padding-top: var(--size-space-xl);
+  background: color(--c-bg-contents);
+}
+
+.bl_contact_list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bl_contact_listItem {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-space-lg) var(--size-space-sm);
+
+  &:first-of-type {
+    padding-top: 1rem;
+  }
+
+  &:not(:first-of-type) {
+    border-top: 1px solid color(--c-text);
+  }
+
+  &:last-of-type {
+    padding-bottom: var(--size-space-4xl);
+  }
+
+  p {
+    font-size: clamp(rem(12px), 4.27vw, rem(16px));
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.bl_contact_listIcon {
+  display: inline-block;
+}
+
+.bl_contact_btnWrap {
+  flex-shrink: 0;
+}
+
+.bl_contact_smText {
+  position: absolute;
+  right: 0;
+  bottom: calc(var(--size-space-4xl) - (1em + 0.667em));
+  margin-top: 0.667em;
+  color: color(--c-base);
+  font-size: rem(12px);
+  line-height: 1.333;
+}
