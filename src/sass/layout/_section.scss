@@ -1,5 +1,13 @@
 .ly_section {
-  --section-mt: var(--size-space-2xl);
+  margin-top: var(--size-space-3xl);
+}
 
-  margin-top: var(--section-mt);
+.ly_section_contents {
+  margin-top: var(--size-space-md);
+}
+
+.ly_section_concept {
+  width: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
