@@ -60,7 +60,7 @@
     <main class="ly_main">
       <section class="ly_section bl_concept">
         <h2 class="el_sectionTitle">コンセプト<span>Concept</span></h2>
-        <div class="ly_section_contents ly_section_concept">
+        <div class="ly_section_contents ly_section_contents__w100">
           <div class="bl_concept_img">
             <img src="/img/concept.webp" alt="" />
           </div>
@@ -71,7 +71,7 @@
               窓から射し込む太陽の光で目が覚め、美しい自然の風景を見ながら、朝のひと時を過ごす。季節折々の風景の移り変わりを身近に感じられる理想の暮らしをご提案します。
             </p>
             <div class="bl_concept_btnWrap">
-              <a href="#" class="el_btn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_wh"
+              <a href="#" class="el_textBtn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_wh"
                 >詳しく見る</a
               >
             </div>
@@ -95,7 +95,7 @@
               <div class="bl_works_linkWrap">
                 <a href="#">
                   <p>若木の家</p>
-                  <p class="el_btn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
+                  <p class="el_textBtn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
                     詳しく見る
                   </p>
                 </a>
@@ -111,7 +111,7 @@
               <div class="bl_works_linkWrap">
                 <a href="#">
                   <p>長谷堂の家</p>
-                  <p class="el_btn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
+                  <p class="el_textBtn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
                     詳しく見る
                   </p>
                 </a>
@@ -127,7 +127,7 @@
               <div class="bl_works_linkWrap">
                 <a href="#">
                   <p>荒谷の家</p>
-                  <p class="el_btn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
+                  <p class="el_textBtn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
                     詳しく見る
                   </p>
                 </a>
@@ -143,7 +143,7 @@
               <div class="bl_works_linkWrap">
                 <a href="#">
                   <p>寺津の家</p>
-                  <p class="el_btn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
+                  <p class="el_textBtn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
                     詳しく見る
                   </p>
                 </a>
@@ -159,7 +159,7 @@
               <div class="bl_works_linkWrap">
                 <a href="#">
                   <p>沼沢の家</p>
-                  <p class="el_btn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
+                  <p class="el_textBtn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
                     詳しく見る
                   </p>
                 </a>
@@ -175,7 +175,7 @@
               <div class="bl_works_linkWrap">
                 <a href="#">
                   <p>青田の家</p>
-                  <p class="el_btn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
+                  <p class="el_textBtn el_iconBtn el_iconBtn__rtArrow el_iconBtn__rtArrow_bk">
                     詳しく見る
                   </p>
                 </a>
@@ -236,10 +236,12 @@
       </section>
       <!-- /.ly_section -->
 
-      <section class="ly_section bl_contact">
+      <section
+        class="ly_section ly_section_contents__w100 ly_section_contents__w100_inner bl_contact"
+      >
         <h2 class="el_sectionTitle">お問い合わせ<span>Contact</span></h2>
         <div class="ly_section_contents">
-          <ul class="ly_flex ly_flex__contact bl_contact_list">
+          <ul class="bl_contact_list">
             <li class="bl_contact_listItem">
               <div class="bl_contact_listIcon">
                 <img src="/img/icon/doc.svg" alt="資料請求" />
@@ -247,7 +249,7 @@
               <!-- /.bl_contact_listIcon -->
               <p>資料請求</p>
               <div class="bl_contact_btnWrap">
-                <a href="#" class="el_btn el_solidBtn el_solidBtn__yl">資料請求する</a>
+                <a href="#" class="el_btn el_btn__yl">資料請求する</a>
               </div>
               <!-- /.bl_contact_btnWrap -->
             </li>
@@ -257,21 +259,27 @@
                 <img src="/img/icon/mail.svg" alt="メール" />
               </div>
               <!-- /.bl_contact_listIcon -->
-              <p>メールでの お問い合わせ</p>
+              <p>
+                <span class="hp_display_ib">メールでの</span
+                ><span class="hp_display_ib">お問い合わせ</span>
+              </p>
               <div class="bl_contact_btnWrap">
-                <a href="#" class="el_btn el_solidBtn el_solidBtn__gr">問い合わせる</a>
+                <a href="#" class="el_btn el_btn__gr">問い合わせる</a>
               </div>
               <!-- /.bl_contact_btnWrap -->
             </li>
             <!-- /.bl_contact_listItem -->
-            <li class="bl_contact_listItem">
+            <li class="bl_contact_listItem bl_contact_listItem__tel">
               <div class="bl_contact_listIcon">
                 <img src="/img/icon/tel.svg" alt="電話" />
               </div>
               <!-- /.bl_contact_listIcon -->
-              <p>お電話でのお問い合わせ</p>
+              <p>
+                <span class="hp_display_ib">お電話での</span
+                ><span class="hp_display_ib">お問い合わせ</span>
+              </p>
               <div class="bl_contact_btnWrap hp_display_sm">
-                <a href="tel:0120-123-456" class="el_btn el_solidBtn el_solidBtn__gr">電話する</a>
+                <a href="tel:0120-123-456" class="el_btn el_btn__gr">電話する</a>
               </div>
               <!-- /.bl_contact_btnWrap -->
               <div class="bl_contact_btnWrap hp_display_lg">
