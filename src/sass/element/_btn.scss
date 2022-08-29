@@ -3,6 +3,23 @@
 
 .el_btn {
   display: inline-block;
+  width: 152px;
+  max-width: 100%;
+  padding: 1em 0;
+
+  &__yl {
+    background: color(--c-accent);
+    color: color(--c-white);
+  }
+
+  &__gr {
+    background: color(--c-base);
+    color: color(--c-white);
+  }
+}
+
+.el_textBtn {
+  display: inline-block;
   max-width: 100%;
 }
 
