@@ -18,6 +18,11 @@
   }
 }
 
+.el_borderBtn {
+  border: 1px solid color(--c-base);
+  color: color(--c-base);
+}
+
 .el_textBtn {
   display: inline-block;
   max-width: 100%;
