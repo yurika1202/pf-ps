@@ -1,3 +1,5 @@
+@use '../functions/' as *;
+@use '../mixin/' as mix;
 @use '../variables/' as var;
 
 .ly_mv {
@@ -10,4 +12,8 @@
   position: relative;
   height: 100%;
   margin: 0 var(--size-width-inner-sm);
+
+  @include mix.mq(lg) {
+    margin: 0 var(--size-width-inner-lg);
+  }
 }
