@@ -60,3 +60,34 @@
     }
   }
 }
+
+.el_headerBtn {
+  width: 24px;
+  height: 21px;
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+
+  rect {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    fill: color(--c-text);
+  }
+
+  &[aria-expanded='true'] {
+    rect {
+      &:nth-of-type(1) {
+        transform: translate(3px, 2px) rotate(30deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(-8px, 0) rotate(-30deg);
+      }
+    }
+  }
+}
