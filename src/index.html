@@ -24,20 +24,93 @@
 
         <button
           type="button"
-          class="bl_header_navBtn el_btn el_headerBtn"
+          class="bl_header_navBtn el_headerBtn hp_display_xl__hidden"
           aria-label="メニューを開く"
+          aria-haspopup="true"
+          aria-controls="drawerNav"
+          aria-expanded="false"
         >
-          <svg>
-            <title>メニューボタン</title>
-            <rect />
-            <rect />
-            <rect />
+          <svg role="img" aria-labelledby="drawerNavTitle" viewBox="0 0 24 21">
+            <title id="drawerNavTitle">メニューボタン</title>
+            <g>
+              <rect width="24" height="1" y="2" />
+              <rect width="24" height="1" y="10.5" />
+              <rect width="24" height="1" y="19" />
+            </g>
           </svg>
         </button>
+
+        <nav
+          class="ly_header_globalNav bl_header_globalNav hp_display_xl hp_display_xl__iFlex"
+          aria-label="h-global"
+        >
+          <ul class="ly_header_globalNav bl_header_globalNav_list" role="menubar">
+            <li class="bl_header_globalNav_listItem">
+              <a href="#concept" role="menuitem">コンセプト<span>Concept</span></a>
+            </li>
+            <!-- /.bl_header_globalNav_listItem -->
+            <li class="bl_header_globalNav_listItem">
+              <a href="#works" role="menuitem">施工実績<span>Works</span></a>
+            </li>
+            <!-- /.bl_header_globalNav_listItem -->
+            <li class="bl_header_globalNav_listItem">
+              <a href="#news" role="menuitem">お知らせ<span>News</span></a>
+            </li>
+            <!-- /.bl_header_globalNav_listItem -->
+            <li class="bl_header_globalNav_listItem">
+              <a href="#" role="menuitem">会社概要<span>Company</span></a>
+            </li>
+            <!-- /.bl_header_globalNav_listItem -->
+            <li class="bl_header_globalNav_listItem">
+              <a href="#" role="menuitem">よくある質問<span>Faq</span></a>
+            </li>
+            <!-- /.bl_header_globalNav_listItem -->
+            <li class="bl_header_globalNav_listItem bl_header_globalNav_listItem__gr">
+              <a href="#contact" role="menuitem">お問い合わせ<span>Contact</span></a>
+            </li>
+            <!-- /.bl_header_globalNav_listItem -->
+          </ul>
+          <!-- /.bl_globalNav_list -->
+        </nav>
+        <!-- /.bl_header_globalNav_list -->
       </div>
       <!-- /.ly_header_inner -->
     </header>
     <!-- /.ly_header -->
+
+    <div class="ly_header_drawerNav" id="drawerNav" aria-hidden="true">
+      <nav class="bl_header_drawerNav" aria-label="drawer">
+        <ul class="bl_header_drawerNav_list" role="menubar">
+          <li class="bl_header_drawerNav_listItem">
+            <a href="#concept" role="menuitem">コンセプト<span>Concept</span></a>
+          </li>
+          <!-- /.bl_header_drawerNav_listItem -->
+          <li class="bl_header_drawerNav_listItem">
+            <a href="#works" role="menuitem">施工実績<span>Works</span></a>
+          </li>
+          <!-- /.bl_header_drawerNav_listItem -->
+          <li class="bl_header_drawerNav_listItem">
+            <a href="#news" role="menuitem">お知らせ<span>News</span></a>
+          </li>
+          <!-- /.bl_header_drawerNav_listItem -->
+          <li class="bl_header_drawerNav_listItem">
+            <a href="#" role="menuitem">会社概要<span>Company</span></a>
+          </li>
+          <!-- /.bl_header_drawerNav_listItem -->
+          <li class="bl_header_drawerNav_listItem">
+            <a href="#" role="menuitem">よくある質問<span>Faq</span></a>
+          </li>
+          <!-- /.bl_header_drawerNav_listItem -->
+          <li class="bl_header_drawerNav_listItem bl_header_drawerNav_listItem__gr">
+            <a href="#contact" role="menuitem">お問い合わせ<span>Contact</span></a>
+          </li>
+          <!-- /.bl_header_drawerNav_listItem -->
+        </ul>
+        <!-- /.bl_drawerNav_list -->
+      </nav>
+      <!-- /.bl_header_drawerNav_list -->
+    </div>
+    <!-- /.bl_header_drawerNav -->
 
     <div class="bl_mv ly_mv">
       <div class="ly_mv_inner">
@@ -58,7 +131,7 @@
     <!-- /.bl_mv -->
 
     <main class="ly_main">
-      <section class="ly_section bl_concept">
+      <section class="ly_section bl_concept" id="concept">
         <h2 class="el_sectionTitle">コンセプト<span>Concept</span></h2>
         <div class="ly_section_contents ly_section_contents__w100">
           <div class="bl_concept_img">
@@ -83,7 +156,7 @@
       </section>
       <!-- /.ly_section -->
 
-      <section class="ly_section bl_works">
+      <section class="ly_section bl_works" id="works">
         <h2 class="el_sectionTitle">施行実績<span>Works</span></h2>
         <div class="ly_section_contents">
           <ul class="bl_works_list">
@@ -193,7 +266,7 @@
       </section>
       <!-- /.ly_section -->
 
-      <section class="ly_section bl_news">
+      <section class="ly_section bl_news" id="news">
         <h2 class="el_sectionTitle">お知らせ<span>News</span></h2>
         <div class="ly_section_contents">
           <ul class="bl_news_list">
@@ -238,6 +311,7 @@
 
       <section
         class="ly_section ly_section_contents__w100 ly_section_contents__w100_inner bl_contact"
+        id="contact"
       >
         <h2 class="el_sectionTitle">お問い合わせ<span>Contact</span></h2>
         <div class="ly_section_contents">
@@ -278,7 +352,7 @@
                 <span class="hp_display_ib">お電話での</span
                 ><span class="hp_display_ib">お問い合わせ</span>
               </p>
-              <div class="bl_contact_btnWrap hp_display_sm">
+              <div class="bl_contact_btnWrap hp_display_lg__hidden">
                 <a href="tel:0120-123-456" class="el_btn el_btn__gr">電話する</a>
               </div>
               <!-- /.bl_contact_btnWrap -->
@@ -318,7 +392,7 @@
           <a href="mailto:info@example.com" class="hp_font_en">info@example.com</a>
         </div>
         <!-- /.bl_footer_info -->
-        <nav class="bl_footer_globalNav" aria-label="global">
+        <nav class="bl_footer_globalNav" aria-label="f-global">
           <ul class="ly_footer_globalNav bl_footer_globalNavList">
             <li><a href="#">コンセプト</a></li>
             <li><a href="#">施工実績</a></li>
