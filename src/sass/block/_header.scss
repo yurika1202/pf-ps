@@ -26,6 +26,9 @@
 }
 
 .bl_header_globalNav_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: inherit;
 }
 
@@ -58,52 +61,6 @@
 
     a {
       color: color(--c-white);
-    }
-  }
-}
-
-.bl_header_drawerNav_list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-
-  @include mix.mq(md) {
-    flex-flow: row wrap;
-  }
-}
-
-.bl_header_drawerNav_listItem {
-  text-align: center;
-
-  a {
-    color: color(--c-text);
-    font-size: rem(18px);
-
-    span {
-      display: block;
-      margin-top: 0.5em;
-      color: color(--c-accent);
-      font-size: rem(12px);
-    }
-  }
-
-  &__gr {
-    width: 100vw;
-    margin: 0 calc(50% - 50vw);
-    padding: var(--size-space-lg) 0;
-    background: color(--c-base);
-
-    a {
-      color: color(--c-white);
-    }
-  }
-
-  @include mix.mq(md) {
-    a {
-      display: block;
-      padding: 0 var(--size-space-sm);
     }
   }
 }

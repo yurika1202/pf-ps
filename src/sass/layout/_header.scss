@@ -7,7 +7,6 @@
   top: 0;
   width: 100%;
   height: var(--size-header-h-sm);
-  background: color(--c-bg-body, 0.8);
 
   @include mix.mq(lg) {
     height: var(--size-header-h-lg);
@@ -19,7 +18,8 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  margin: 0 var(--size-width-inner-sm);
+  padding: 0 var(--size-width-inner-sm);
+  background: color(--c-bg-body, 0.8);
 
   @include mix.mq(xl) {
     justify-content: center;
@@ -28,27 +28,5 @@
 
   @include mix.mq(xxl) {
     margin: 0 var(--size-width-inner-lg);
-  }
-}
-
-.ly_header_globalNav {
-  display: flex;
-  align-items: center;
-}
-
-.ly_header_drawerNav {
-  position: fixed;
-  z-index: 9;
-  width: 100vw;
-  padding: calc(var(--size-header-h-sm) + var(--size-space-lg)) var(--size-space-lg) 0;
-  background: color(--c-bg-contents);
-
-  &[aria-hidden='true'] {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  @include mix.mq(lg) {
-    padding: calc(var(--size-header-h-lg) + var(--size-space-lg)) var(--size-space-lg) 0;
   }
 }
