@@ -1,1 +1,1 @@
-console.log('ok');
+import 'lazysizes';
