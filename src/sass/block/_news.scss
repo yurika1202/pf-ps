@@ -25,10 +25,6 @@
     &:not(:first-of-type) {
       border-top: none;
     }
-
-    &:last-of-type {
-      padding-bottom: var(--size-space-xl);
-    }
   }
 }
 
@@ -102,4 +98,8 @@
 
 .bl_news_btnWrap {
   text-align: center;
+
+  @include mix.mq(lg) {
+    margin-top: var(--size-space-sm);
+  }
 }

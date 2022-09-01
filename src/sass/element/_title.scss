@@ -1,4 +1,5 @@
 @use '../functions/' as *;
+@use '../mixin/' as mix;
 
 .el_sectionTitle {
   position: relative;
@@ -24,5 +25,9 @@
     height: 1px;
     transform: translateX(-50%);
     background: color(--c-accent);
+  }
+
+  @include mix.mq(lg) {
+    font-size: rem(32px);
   }
 }

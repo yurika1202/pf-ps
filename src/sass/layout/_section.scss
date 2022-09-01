@@ -1,5 +1,11 @@
+@use '../mixin/' as mix;
+
 .ly_section {
   margin-top: var(--size-space-3xl);
+
+  @include mix.mq(lg) {
+    margin-top: var(--size-space-5xl);
+  }
 }
 
 .ly_section_contents {
@@ -12,6 +18,15 @@
 
     &_inner {
       padding: 0 calc(50vw - 50%);
+    }
+  }
+
+  @include mix.mq(lg) {
+    margin-top: var(--size-space-lg);
+
+    &__concept {
+      position: relative;
+      padding-bottom: var(--size-space-lg);
     }
   }
 }

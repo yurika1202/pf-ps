@@ -47,4 +47,8 @@
     visibility: hidden;
     opacity: 0;
   }
+
+  @include mix.mq(lg) {
+    padding: calc(var(--size-header-h-lg) + var(--size-space-lg)) var(--size-space-lg) 0;
+  }
 }

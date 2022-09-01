@@ -16,6 +16,17 @@
     border-top: 1px solid color(--c-white);
     background: color(--c-bg-footer-sub);
   }
+
+  @include mix.mq(lg) {
+    padding: var(--size-space-4xl) 0 var(--size-space-5xl);
+
+    &__sec {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--size-space-sm) var(--size-width-inner-lg);
+    }
+  }
 }
 
 .ly_footer_info {
@@ -29,11 +40,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  @include mix.mq(lg) {
+    flex-direction: row;
+    gap: var(--size-space-md);
+  }
 }
 
 .ly_footer_secondNav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--size-space-xl);
 }

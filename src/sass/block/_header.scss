@@ -68,6 +68,11 @@
   align-items: center;
   justify-content: center;
   gap: 2em;
+
+  @include mix.mq(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .bl_header_drawerNav_listItem {
@@ -93,6 +98,13 @@
 
     a {
       color: color(--c-white);
+    }
+  }
+
+  @include mix.mq(md) {
+    a {
+      display: block;
+      padding: 0 var(--size-space-sm);
     }
   }
 }

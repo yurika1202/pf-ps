@@ -1,12 +1,13 @@
 @use '../functions/' as *;
+@use '../mixin/' as mix;
 
 .bl_works_list {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(159px, 1fr));
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  padding: 0 calc(50vw - 50% + var(--size-width-inner-sm));
+  padding: 0 calc(50vw - 50%);
   gap: var(--size-space-xl) var(--size-space-sm);
 
   &::after {
@@ -20,6 +21,16 @@
     height: calc(508 / 614) * 100%;
     background: color(--c-bg-contents);
   }
+
+  @include mix.mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-space-4xl) var(--size-space-xl);
+
+    &::after {
+      width: calc(986 / 1440) * 100vw;
+      height: calc(638 / 716) * 100%;
+    }
+  }
 }
 
 .bl_works_img {
@@ -30,6 +41,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @include mix.mq(lg) {
+    height: 240px;
   }
 }
 
@@ -46,14 +61,31 @@
     height: calc(100% + 30px);
     background: color(--c-text);
   }
+
+  @include mix.mq(lg) {
+    padding: 0 var(--size-space-lg);
+
+    &::before {
+      left: 1em;
+      height: calc(100% + 56px);
+    }
+  }
 }
 
 .bl_works_text {
   font-size: rem(20px);
   line-height: 3;
+
+  @include mix.mq(lg) {
+    font-size: rem(24px);
+  }
 }
 
 .bl_works_btnWrap {
-  margin-top: var(--size-space-4xl);
+  margin-top: var(--size-space-3xl);
   text-align: center;
+
+  @include mix.mq(lg) {
+    margin-top: var(--size-space-4xl);
+  }
 }

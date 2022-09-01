@@ -1,3 +1,9 @@
+@use '../mixin/' as mix;
+
 .ly_main {
   margin: 0 var(--size-width-inner-sm);
+
+  @include mix.mq(lg) {
+    margin: 0 var(--size-width-inner-lg);
+  }
 }

@@ -1,10 +1,11 @@
 @use '../functions/' as *;
+@use '../mixin/' as mix;
 @use '../variables/' as var;
 
 .el_btn {
   display: inline-block;
-  width: 152px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 152px;
   padding: 1em 0;
 
   &__yl {
@@ -15,6 +16,11 @@
   &__gr {
     background: color(--c-base);
     color: color(--c-white);
+  }
+
+  @include mix.mq(lg) {
+    min-width: 160px;
+    max-width: 200px;
   }
 }
 

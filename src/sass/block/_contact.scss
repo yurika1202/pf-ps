@@ -1,14 +1,27 @@
 @use '../functions/' as *;
+@use '../mixin/' as mix;
 
 .bl_contact {
   padding-top: var(--size-space-xl);
   background: color(--c-bg-contents);
+
+  @include mix.mq(lg) {
+    padding: var(--size-space-5xl) 0;
+  }
 }
 
 .bl_contact_list {
   display: flex;
   flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
   text-align: center;
+
+  @include mix.mq(lg) {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+  }
 }
 
 .bl_contact_listItem {
@@ -30,10 +43,35 @@
     padding-bottom: var(--size-space-4xl);
   }
 
-  p {
-    font-size: clamp(rem(12px), 4.27vw, rem(16px));
-    line-height: 1.5;
-    text-align: center;
+  @include mix.mq(lg) {
+    flex-direction: column;
+    justify-content: center;
+    width: 282px;
+    padding: var(--size-space-md) 0;
+
+    &:first-of-type {
+      padding-top: var(--size-space-md);
+    }
+
+    &:not(:first-of-type) {
+      border-top: none;
+      border-left: 1px solid color(--c-text);
+    }
+
+    &:last-of-type {
+      padding-bottom: var(--size-space-lg);
+    }
+  }
+}
+
+.bl_contact_methodTitle {
+  font-size: clamp(rem(12px), 4.27vw, rem(16px));
+  line-height: 1.5;
+  text-align: center;
+
+  @include mix.mq(lg) {
+    margin-top: 1.125em;
+    font-size: rem(20px);
   }
 }
 
@@ -43,6 +81,16 @@
 
 .bl_contact_btnWrap {
   flex-shrink: 0;
+  width: 152px;
+
+  @include mix.mq(lg) {
+    margin-top: var(--size-space-md);
+  }
+}
+
+.bl_contact_telNum {
+  color: color(--c-base);
+  font-size: rem(24px);
 }
 
 .bl_contact_smText {
@@ -53,4 +101,8 @@
   color: color(--c-base);
   font-size: rem(12px);
   line-height: 1.333;
+
+  @include mix.mq(lg) {
+    position: static;
+  }
 }
