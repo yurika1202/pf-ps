@@ -7,10 +7,12 @@
   top: 0;
   width: 100vw;
   padding: calc(var(--size-header-h-sm) + var(--size-space-lg)) var(--size-space-lg) 0;
+  transition: visibility 0.2s ease, opacity 0.2s ease, top 0.5s ease-out;
   background: color(--c-bg-contents);
 
   &[aria-hidden='true'] {
     visibility: hidden;
+    top: -100%;
     opacity: 0;
   }
 
