@@ -27,6 +27,6 @@
   }
 
   @include mix.mq(xxl) {
-    margin: 0 var(--size-width-inner-lg);
+    padding: 0 var(--size-width-inner-lg);
   }
 }
