@@ -1,0 +1,39 @@
+@use '../mixin/' as mix;
+
+.hp_display_ib {
+  display: inline-block;
+}
+
+.hp_display_lg__hidden {
+  @include mix.mq(lg) {
+    display: none;
+  }
+}
+
+.hp_display_lg {
+  display: none;
+
+  @include mix.mq(lg) {
+    display: inline-block;
+  }
+}
+
+.hp_display_xl {
+  display: none;
+
+  @include mix.mq(xl) {
+    display: inline-block;
+  }
+
+  &__iFlex {
+    @include mix.mq(xl) {
+      display: inline-flex;
+    }
+  }
+}
+
+.hp_display_xl__hidden {
+  @include mix.mq(xl) {
+    display: none;
+  }
+}

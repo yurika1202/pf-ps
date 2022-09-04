@@ -1,0 +1,11 @@
+@use '../mixin/' as mix;
+
+.hp_mt-xl {
+  margin-top: var(--size-space-xl);
+}
+
+.hp_mt0__lg {
+  @include mix.mq(lg) {
+    margin-top: 0;
+  }
+}
