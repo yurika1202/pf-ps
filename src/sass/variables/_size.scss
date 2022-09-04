@@ -13,9 +13,16 @@ $spaces: (
   space-md: 24px,
   space-lg: 32px,
   space-xl: 40px,
-  space-2xl: 80px,
+  space-2xl: 56px,
   space-3xl: 64px,
-  space-4xl: 120px,
+  space-4xl: 80px,
+  space-5xl: 120px,
+);
+
+/* component */
+$components: (
+  header-h-sm: 64px,
+  header-h-lg: 80px,
 );
 
 :root {
@@ -24,5 +31,8 @@ $spaces: (
   }
   @each $key, $space in $spaces {
     --size-#{$key}: #{$space};
+  }
+  @each $key, $component in $components {
+    --size-#{$key}: #{$component};
   }
 }
