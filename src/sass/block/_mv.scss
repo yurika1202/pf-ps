@@ -1,6 +1,19 @@
 @use '../functions/' as *;
 @use '../mixin/' as mix;
 
+.bl_mv {
+  visibility: hidden;
+  transition: all 2s ease-in-out;
+  opacity: 0;
+  filter: blur(6px);
+
+  &.is_display {
+    visibility: visible;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 .bl_mv_textWrap {
   position: absolute;
   top: calc(50% - 64px);
@@ -8,13 +21,6 @@
   width: 100%;
   padding: 0 0 18px;
   transform: translateX(-50%);
-
-  h1,
-  p {
-    color: color(--c-white);
-    text-shadow: 0 0 30.4px color(--c-text), 0 0 6px color(--c-text), 0 0 12px color(--c-text),
-      0 0 20px color(--c-text);
-  }
 
   h1 {
     font-size: clamp(40px, 10.667vw, 56px);
@@ -30,12 +36,38 @@
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: 100%;
+    left: 0;
+    width: 0;
     height: 1px;
-    transform: translateX(-50%);
+    transition: width 0.5s ease-in-out;
     background: color(--c-white);
-    box-shadow: 0 0 30.4px color(--c-text), 0 0 6px color(--c-text), 0 0 12px color(--c-text),
-      0 0 20px color(--c-text);
+    box-shadow: 0 0 1px color(--c-text), 0 0 3px color(--c-text), 0 0 5px color(--c-text);
+  }
+
+  &.is_display {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.bl_mv_text {
+  overflow: hidden;
+
+  span {
+    display: inline-block;
+    transform: translateY(105%);
+    color: color(--c-white);
+    text-shadow: 0 0 1px color(--c-text), 0 0 3px color(--c-text), 0 0 5px color(--c-text);
+
+    &.is_display {
+      animation: textAnimation 2s 1.5s forwards;
+    }
+  }
+}
+
+@keyframes textAnimation {
+  100% {
+    transform: translateY(0);
   }
 }
