@@ -1,13 +1,17 @@
 import 'typed-query-selector';
 
-export default window.onload = () => {
+/** MV表示 */
+const mvDisplay = () => {
   const mv = document.getElementById('js_mv');
   mv?.classList.add('is_display');
+};
 
-  const textElements = document.querySelectorAll('span.js_mv_text');
-  const textElementsArr = Array.from(textElements);
+/** MVコンテンツ表示 */
+const mvContentsDisplay = () => {
+  const textElementsArr = Array.from(document.querySelectorAll('span.js_mv_text'));
   let setText: Promise<void>;
 
+  /** 一文字ずつ表示用クラスとアニメーション遅延時間を設定 */
   textElementsArr.map((el, index) => {
     const text = el.textContent;
     const char = text?.split('');
@@ -15,7 +19,6 @@ export default window.onload = () => {
     char?.forEach((target, i) => {
       const sec = i / 10;
       newText += `<span class="is_display" style="animation-delay:${sec}s;">${target}</span>`;
-      return newText;
     });
 
     const newEl = el;
@@ -28,6 +31,7 @@ export default window.onload = () => {
     return setText;
   });
 
+  /** 作成したテキストと下線をセット */
   async function setting() {
     await setText;
     setTimeout(() => {
@@ -37,3 +41,10 @@ export default window.onload = () => {
   }
   return setting();
 };
+
+const mv = () => {
+  mvDisplay();
+  mvContentsDisplay();
+};
+
+export default mv;
