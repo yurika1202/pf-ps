@@ -2,13 +2,24 @@
 @use '../mixin/' as mix;
 
 .bl_concept_img {
+  visibility: hidden;
   width: 100%;
   height: 360px;
+  transform: translateX(50%);
+  transition: transform 0.5s ease-out;
+  opacity: 0;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &.is_display {
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform 0.8s ease-out, opacity 1s ease;
+    opacity: 1;
   }
 
   @include mix.mq(lg) {
@@ -19,10 +30,21 @@
 }
 
 .bl_concept_textWrap {
+  visibility: hidden;
   width: 100vw;
   margin: 0 calc(50% - 50vw);
   padding: var(--size-space-2xl) calc(50vw - 50% + var(--size-width-inner-sm));
+  transform: translateX(-50%);
+  transition: transform 0.5s ease-out;
+  opacity: 0;
   background: color(--c-base);
+
+  &.is_display {
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform 0.8s ease-out, opacity 1s ease;
+    opacity: 1;
+  }
 
   @include mix.mq(lg) {
     position: absolute;

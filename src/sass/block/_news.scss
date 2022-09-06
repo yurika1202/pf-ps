@@ -7,7 +7,11 @@
 }
 
 .bl_news_listItem {
+  visibility: hidden;
   padding: var(--size-space-md) 0;
+  transform: translateY(5%);
+  transition: all 0.4s ease-out;
+  opacity: 0;
 
   &:first-of-type {
     padding-top: 0;
@@ -15,6 +19,12 @@
 
   &:not(:first-of-type) {
     border-top: 1px solid color(--c-gray);
+  }
+
+  &.is_display {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
   }
 
   a {
