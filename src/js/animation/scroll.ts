@@ -45,4 +45,9 @@ const listIo = () => {
   targetListsChildren.forEach(children => children.forEach(child => observer.observe(child)));
 };
 
-export { defaultIo, listIo };
+const scrollAnimation = () => {
+  defaultIo();
+  listIo();
+};
+
+export default scrollAnimation;
