@@ -57,14 +57,40 @@ const drawerToggle = (btn: HTMLButtonElement, target: HTMLElement) => {
   });
 };
 
+/**
+ * スクロールに合わせたヘッダーの表示制御
+ * @param target ヘッダーを非表示にする要素エリア
+ */
+const headerDisplay = (target: HTMLElement) => {
+  const header = document.getElementById('js_header');
+  const options: object = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0,
+  };
+  const cb = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        header?.classList.remove('is_display');
+      } else {
+        header?.classList.add('is_display');
+      }
+    });
+  };
+  const observer = new IntersectionObserver(cb, options);
+  observer.observe(target);
+};
+
 /** ヘッダー */
 const headerNav = () => {
   const toggleBtn = document.querySelector('button.js_drawerNav_btn');
   const drawerNav = document.querySelector('div.js_drawerNav');
-
   if (toggleBtn != null && drawerNav != null) {
     drawerToggle(toggleBtn, drawerNav);
   }
+
+  const noDisplayArea = document.getElementById('js_mv');
+  headerDisplay(noDisplayArea!);
 };
 
 export default headerNav;

@@ -2,11 +2,20 @@
 @use '../mixin/' as mix;
 
 .ly_header {
+  visibility: hidden;
   position: fixed;
   z-index: 10;
-  top: 0;
+  top: -100%;
   width: 100%;
   height: var(--size-header-h-sm);
+  transition: top 0.8s ease-in-out, opacity 0.4s ease, visibility 0.4s ease;
+  opacity: 0;
+
+  &.is_display {
+    visibility: visible;
+    top: 0;
+    opacity: 1;
+  }
 
   @include mix.mq(lg) {
     height: var(--size-header-h-lg);
