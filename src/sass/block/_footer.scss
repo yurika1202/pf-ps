@@ -40,7 +40,6 @@
 
   @include mix.mq(lg) {
     flex-direction: row;
-    gap: var(--size-space-md);
   }
 }
 
@@ -114,8 +113,6 @@
   }
 
   @include mix.mq(lg) {
-    width: fit-content;
-
     &:not(:first-of-type) {
       border-top: 0;
       border-left: 1px solid color(--c-white);
