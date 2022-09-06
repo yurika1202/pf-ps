@@ -44,6 +44,12 @@
     transform: translateY(0);
     opacity: 1;
   }
+
+  @include mix.hover {
+    .el_textBtn {
+      scale: 1.1;
+    }
+  }
 }
 
 .bl_works_img {

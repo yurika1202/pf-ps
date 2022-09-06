@@ -68,8 +68,13 @@
 
   a {
     padding: 0 min(5.4vw, var(--size-space-xl));
+    transition: opacity 0.4s ease-in-out;
     color: color(--c-white);
     font-size: clamp(rem(10px), 3.7vw, rem(14px));
+
+    @include mix.hover {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -91,9 +96,13 @@
     visibility: hidden;
     padding: var(--size-space-md) 0;
     transform: translateY(-10%);
-    transition: all 0.4s 0.4s ease-out;
+    transition: transform 0.4s 0.4s ease-out, scale 0.4s ease-in-out;
     opacity: 0;
     color: color(--c-white);
+
+    @include mix.hover {
+      scale: 1.1;
+    }
   }
 
   &.is_display {
