@@ -5,6 +5,12 @@
     "stylelint-config-property-sort-order-smacss",
     "stylelint-config-prettier"
   ],
-  "rules": {},
+  "rules": {
+    "selector-id-pattern": "^[a-z][a-zA-Z0-9_-]+$",
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9_-]+$",
+    "keyframes-name-pattern": null,
+    "scss/at-mixin-pattern": null,
+    "scss/dollar-variable-pattern": null
+  },
   "ignoreFiles": ["docs/**/**/*.css", "**/*.js"]
 }

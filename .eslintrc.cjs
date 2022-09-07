@@ -19,6 +19,17 @@ module.exports = {
         devDependencies: true,
       },
     ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     // 'no-restricted-syntax': [
     //   'error',
     //   {
@@ -42,5 +53,13 @@ module.exports = {
     //   },
     // ],
     // 'no-console': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.ts', '.tsx'],
+        moduleDirectory: ['src/js/module', 'node_modules'],
+      },
+    },
   },
 };
