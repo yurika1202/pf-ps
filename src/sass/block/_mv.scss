@@ -67,6 +67,10 @@
 }
 
 @keyframes textAnimation {
+  0% {
+    transform: translateY(105%);
+  }
+
   100% {
     transform: translateY(0);
   }
