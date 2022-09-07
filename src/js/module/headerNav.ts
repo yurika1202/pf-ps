@@ -37,9 +37,18 @@ const drawerToggle = (btn: HTMLButtonElement, target: HTMLElement) => {
     }
   });
 
-  /** ドロワーメニューリンククリック時の挙動 */
-  const anchorLinks = target.querySelectorAll('a[href^="#"]');
-  const anchorLinksArr = Array.from(anchorLinks);
+  const anchorLinksArr = Array.from(target.querySelectorAll('a[href^="#"]'));
+  anchorLinksArr.forEach(link =>
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      closeContents();
+    })
+  );
+};
+
+/** アンカーリンククリック時の挙動 */
+const anchorClick = () => {
+  const anchorLinksArr = Array.from(document.querySelectorAll('a[href^="#"]'));
   anchorLinksArr.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -47,12 +56,10 @@ const drawerToggle = (btn: HTMLButtonElement, target: HTMLElement) => {
       const targetElement = document.querySelector(targetId);
       const targetOffsetTop = window.pageYOffset + targetElement!.getBoundingClientRect().top;
       const headerHeight: number = document.querySelector('header')!.clientHeight;
-
       window.scrollTo({
         top: targetOffsetTop - headerHeight,
         behavior: 'smooth',
       });
-      closeContents();
     });
   });
 };
@@ -91,6 +98,8 @@ const headerNav = () => {
 
   const noDisplayArea = document.getElementById('js_mv');
   headerDisplay(noDisplayArea!);
+
+  anchorClick();
 };
 
 export default headerNav;
